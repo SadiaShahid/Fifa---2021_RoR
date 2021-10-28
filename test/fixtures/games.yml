@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_team_name: MyString
+  away_team_name: MyString
+  home_team_logo: MyString
+  away_team_logo: MyString
+  minute: 1
+  date: 2021-10-27 22:01:20
+  reach: MyString
+  channel: MyString
+  league: MyString
+  price_per_minute: MyString
+
+two:
+  home_team_name: MyString
+  away_team_name: MyString
+  home_team_logo: MyString
+  away_team_logo: MyString
+  minute: 1
+  date: 2021-10-27 22:01:20
+  reach: MyString
+  channel: MyString
+  league: MyString
+  price_per_minute: MyString

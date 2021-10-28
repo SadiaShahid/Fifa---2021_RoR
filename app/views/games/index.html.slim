@@ -1,0 +1,39 @@
+h1 Listing games
+
+table
+  thead
+    tr
+      th Home team name
+      th Away team name
+      th Home team logo
+      th Away team logo
+      th Minute
+      th Date
+      th Reach
+      th Channel
+      th League
+      th Price per minute
+      th
+      th
+      th
+
+  tbody
+    - @games.each do |game|
+      tr
+        td = game.home_team_name
+        td = game.away_team_name
+        td = game.home_team_logo
+        td = game.away_team_logo
+        td = game.minute
+        td = game.date
+        td = game.reach
+        td = game.channel
+        td = game.league
+        td = game.price_per_minute
+        td = link_to 'Show', game
+        td = link_to 'Edit', edit_game_path(game)
+        td = link_to 'Destroy', game, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Game', new_game_path

@@ -1,0 +1,45 @@
+p#notice = notice
+
+p
+  strong Home team name:
+  = @game.home_team_name
+
+p
+  strong Away team name:
+  = @game.away_team_name
+
+p
+  strong Home team logo:
+  = @game.home_team_logo
+
+p
+  strong Away team logo:
+  = @game.away_team_logo
+
+p
+  strong Minute:
+  = @game.minute
+
+p
+  strong Date:
+  = @game.date
+
+p
+  strong Reach:
+  = @game.reach
+
+p
+  strong Channel:
+  = @game.channel
+
+p
+  strong League:
+  = @game.league
+
+p
+  strong Price per minute:
+  = @game.price_per_minute
+
+=> link_to 'Edit', edit_game_path(@game)
+'|
+=< link_to 'Back', games_path

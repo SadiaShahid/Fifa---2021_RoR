@@ -1,0 +1,25 @@
+.header,
+.footer {
+  background-color: #326295;
+  .brand {
+    width: 12.5vw;
+  }
+}
+.game-list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 78vh;
+  .game {
+    span {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    .small {
+      font-size: 12.8px;
+    }
+    .team {
+      object-fit: contain;
+    }
+  }
+}

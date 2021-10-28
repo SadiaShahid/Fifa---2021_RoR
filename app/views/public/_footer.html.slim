@@ -1,0 +1,10 @@
+footer [ id='footer'
+  class='text-white fixed-bottom animate__animated animate__slideInUp'
+  ]
+  div class='d-flex justify-content-center footer p-4' data-controller='count'
+    - if @total_minutes == 0
+      span class='h5 fw-normal me-4' id='addedMin' data-count-target='added' Add minutes to campaign
+      button class='btn btn-light rounded-0' id='proceedBtn' data-count-target='proceedBtn' disabled='true'  Proceed to Checkout
+    - else 
+      span class='h5 fw-normal me-4' id='addedMin' data-count-target='added' #{@total_minutes} minutes added to campaign
+      button class='btn btn-light rounded-0' id='proceedBtn' data-count-target='proceedBtn'  Proceed to Checkout
