@@ -12,8 +12,8 @@ html
   / p class="alert" = alert
   
   body
-    - if user_signed_in?
-      = render partial: 'public/header'
+    
+    = render partial: 'public/header'
     = yield
     - if user_signed_in?
       = render partial: 'public/footer'

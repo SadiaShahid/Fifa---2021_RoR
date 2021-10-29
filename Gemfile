@@ -33,7 +33,10 @@ gem "font-awesome-rails"
 gem 'devise'
 # simple_form gem
 gem 'simple_form'
+# erb/html to slim
+# gem html2slim
 
+gem 'redis'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -27,7 +27,7 @@ div class='container-fluid'
           div class='col-lg-1 text-center'
             span class='p-2 text-success fw-bold' #{game.price_per_minute}
           div class='col-lg-2 text-center'
-            = form_for game, html: { data: { 'count-target': 'form' , 'value': @total_minutes } } do |form|
+            = form_for game, html: { data: { 'count-target': 'form' } } do |form|
               div class="btn-group" role="group" aria-label="Basic example"
                 button type="button" value=game.id class="btn px-3 border" data-action='click->count#decrement click->footer#update'
                   i class='fa fa-angle-down fw-bolder' aria-hidden=true
