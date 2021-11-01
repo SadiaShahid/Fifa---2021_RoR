@@ -5,11 +5,12 @@ header class='header'
         a href='#' class='navbar-brand'
           = image_tag  "fifacom-white-3e9c1d66.svg", class:'brand', height:'auto'
         - if user_signed_in?
-          div class='w-75 text-end'
+          div class='d-flex justify-content-end w-75' data-controller = 'game'
+            
             div class="dropstart"
-              a class="icon" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
-                i class="fa fa-bell fa-lg text-white" aria-hidden="true" data-action='click->ajax#notify'
-                  span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" data-ajax-target='badge' id='bad'
-                  / = current_user.notifications.unread.count %>
-              ul class="dropdown-menu" id='list' aria-labelledby="dropdownMenuLink" data-ajax-target='notification'
+              a class="" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                i class="fa fa-bell fa-lg text-white" aria-hidden="true" 
+                span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" data-ajax-target='badge' id='bad' 0
+              ul class="dropdown-menu" id='list' aria-labelledby="dropdownMenuLink"
+              
           = link_to "Sign-Out", destroy_user_session_path, method: :delete, :class => "btn btn-light text-muted"

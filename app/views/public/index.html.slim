@@ -1,7 +1,7 @@
 div class='container-fluid' 
   div class='mx-5 my-4 vh-100 game-list' data-controller='footer'
     - @games.each do |game|
-      div data-controller='count'
+      div data-controller='game'
         div class='row d-flex align-items-center border-bottom px-2 py-4 bg-light game'
           div class='col-lg-2 text-center'
             = image_tag  "#{game.home_team_logo}", width:50, height:50, class:'m-2 team'
@@ -27,15 +27,15 @@ div class='container-fluid'
           div class='col-lg-1 text-center'
             span class='p-2 text-success fw-bold' #{game.price_per_minute}
           div class='col-lg-2 text-center'
-            = form_for game, html: { data: { 'count-target': 'form' } } do |form|
+            = form_for game, html: { data: { 'game-target': 'form' } } do |form|
               div class="btn-group" role="group" aria-label="Basic example"
-                button type="button" value=game.id class="btn px-3 border" data-action='click->count#decrement click->footer#update'
+                button type="button" value=game.id class="btn px-3 border" data-action='click->game#decrement click->footer#update'
                   i class='fa fa-angle-down fw-bolder' aria-hidden=true
-                = form.text_field :minute, data: { 'count-target': 'minute', 'footer-target': 'minute' }, class: 'bg-light col-3 border-0 text-center' 
+                = form.text_field :minute, data: { 'game-target': 'minute', 'footer-target': 'minute' }, class: 'bg-light col-3 border-0 text-center', readonly: true
                 button [
                   type="button" 
                   value= game.id
                   class="btn px-3 btn-secondary border"
-                  data-action='click->count#increment click->footer#update'
+                  data-action='click->game#increment click->footer#update'
                 ]
                   i.fa.fa-angle-up.fw-bolder aria-hidden=true
